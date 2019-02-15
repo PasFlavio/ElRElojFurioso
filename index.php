@@ -7,10 +7,13 @@ V1.0
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="CSS/main.css" rel="stylesheet" type="text/css"/>
+        <link href="./CSS/main.css" rel="stylesheet" type="text/css"/>
         <title>Horloge Furieuse</title>
     </head>
     <body>
+        <header>
+            
+        </header>
         <table border="1" cellspacing="5">
             <thead>
                 <!-- I L N E S T O D E U X -->
