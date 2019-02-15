@@ -8,7 +8,7 @@ V1.0
     <head>
         <meta charset="UTF-8">
         <link href="CSS/main.css" rel="stylesheet" type="text/css"/>
-        <title></title>
+        <title>Horloge Furieuse</title>
     </head>
     <body>
         <table border="1" cellspacing="5">
