@@ -1,9 +1,12 @@
 <style>
     .il{
-        color: purple;
+        color: red;
     }
     .est{
-        color: purple;
+        color: red;
+    }
+    .neuf{
+        color: black;
     }
 </style>
 <div id="Horloge">
@@ -73,9 +76,9 @@
             <!-- M I D I X M I N U I T -->
             <td class="midi">M</td>
             <td class="midi">I</td>
-            <td class="midi">D</td>
-            <td class="midi">I</td>
-            <td>X</td>
+            <td class="midi dixHeure">D</td>
+            <td class="midi dixHeure">I</td>
+            <td class="dixHeure">X</td>
             <td class="minuit">M</td>
             <td class="minuit">I</td>
             <td class="minuit">N</td>
@@ -157,25 +160,53 @@
 </table>
 <script>
     let refresh = setInterval(Refresh(), 100);
-
     function Refresh() {
         var date = new Date(Date.now());
         var minuteLocal = date.getMinute;
         var heureLocal = date.getHours();
 
-        document.getElementById('Horloge').innerHTML += heureLocal;
-        switch (heureLocal) {
-            case 1:
-                une.style.color = 'purple';
-                break;
-            case 9:
-                document.getElementsByClassName('neuf').style.color = 'purple';
-                break;
-        }
+        var heureAAfficher[];
+                var heureAEteindre
+        [];
 
-
-
-        Test.innerHTML = "<p>Heure en France: " + heureFrance + "</p><p>Heure en Chine: " + heureChine + "</p><p>Heure aux Etats-Unis: " + heureEtatsUnis + "</p>"
+        if (heureLocal === 1)
+            heureAAfficher = document.getElementsByClassName('une');
+        else
+            heureAEteindre.push(document.getElementsByClassName('une'));
+        if (heureLocal === 2)
+            heureAAfficher = document.getElementsByClassName('deux');
+        else
+            heureAEteindre = document.getElementsByClassName('deux');
+        if (heureLocal === 3)
+            heureAAfficher = document.getElementsByClassName('trois');
+        else
+            heureAEteindre = document.getElementsByClassName('trois');
+        if (heureLocal === 4)
+            heureAAfficher = document.getElementsByClassName('quatre');
+        else
+            heureAEteindre = document.getElementsByClassName('quatre');
+        if (heureLocal === 5)
+            heureAAfficher = document.getElementsByClassName('cinq');
+        else
+            heureAEteindre = document.getElementsByClassName('cinq');
+        if (heureLocal === 6)
+            heureAAfficher = document.getElementsByClassName('six');
+        else
+            heureAEteindre = document.getElementsByClassName('six');
+        if (heureLocal === 7)
+            heureAAfficher = document.getElementsByClassName('sept');
+        else
+            heureAEteindre = document.getElementsByClassName('sept');
+        if (heureLocal === 8)
+            heureAAfficher = document.getElementsByClassName('huit');
+        else
+            heureAEteindre = document.getElementsByClassName('huit');
+    }
+    for (var i = 0; i < heureAAfficher.length; i++) {
+        heureAAfficher[i].style.color = 'red';
+    }
+    for (var i = 0; i < heureAEteindre.length; i++) {
+        heureAAfficher[i].style.color = 'black';
     }
 
 
