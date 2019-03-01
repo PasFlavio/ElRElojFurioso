@@ -7,3 +7,27 @@ header {
 body {
     
 }
+
+div#Carre{
+    width:400px;
+    height:400px;
+    background:blue;
+    margin:10px auto;
+}
+
+div#Rond{
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:purple;
+    margin:10px auto;
+}
+
+div#Triangle{
+   width:0px;
+   height:0px;
+   border-left: 200px solid transparent;
+   border-right: 200px solid transparent;
+   border-top: 400px solid red;
+   margin:10px auto;
+}
