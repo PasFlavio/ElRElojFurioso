@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <p>
-            <audio id='lecteurMp3' controls="controls" autoplay="autoplay" >
-                <source src="musiques/musique1.mp3" type="audio/mp3"/>
+    <body onload="setInterval(GererMusique, 1);">
+
+        <p id="ListeAudio">
+            <audio controls id="LecteurMp3" autoplay="">
+                <source src="musiques/musique1.mp3" type="audio/mpeg">
             </audio>
         </p>
+
+        <script>
+
+            var musique = ["<source src='musiques/musique1.mp3' type='audio/mpeg'>", "<source src='musiques/musique2.mp3' type='audio/mpeg'>", "<source src='musiques/musique3.mp3' type='audio/mpeg'>", "<source src='musiques/musique4.mp3' type='audio/mpeg'>"];
+
+            var compteurMusique = 0;
+
+            function GererMusique() {
+
+                if (document.getElementById("LecteurMp3").currentTime >= 0 && !document.getElementById("LecteurMp3").ended) {
+                } else {
+
+                    document.getElementById("LecteurMp3").remove();
+
+                    document.getElementById("ListeAudio").innerHTML = "<audio controls id='LecteurMp3' autoplay></audio>";
+
+                    if (compteurMusique == 3) {
+                        compteurMusique = -1;
+                    }
+
+                    compteurMusique++;
+
+                    document.getElementById("LecteurMp3").innerHTML = musique[compteurMusique];
+                }
+            }
+        </script>
     </body>
 </html>
