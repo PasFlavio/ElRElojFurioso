@@ -32,11 +32,9 @@ V1.0
             var lecteurMp3 = document.getElementById('lecteurMp3');
 
             function timer() {
-                var heureFrance = moment().tz('Europe/Paris').format('H:mm');
-                var heureChine = moment().tz('Asie/Chine').format('H:mm');
-                var heureEtatsUnis = moment().tz('Amerique/Etats-Unis').format('H:mm');
-
-                Test.innerHTML = "<p>Heure en France: " + heureFrance + "</p><p>Heure en Chine: " + heureChine + "</p><p>Heure aux Etats-Unis: " + heureEtatsUnis + "</p>"
+                var date = new Date(Date.now());
+                var minuteLocal = date.getMinute;
+                var heureLocal = date.getHours();
             }
 
 
