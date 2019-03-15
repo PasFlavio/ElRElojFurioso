@@ -159,55 +159,229 @@
     </tbody>
 </table>
 <script>
-    let refresh = setInterval(Refresh(), 100);
+    var refresh = setInterval(Refresh, 1000);
     function Refresh() {
         var date = new Date(Date.now());
-        var minuteLocal = date.getMinute;
         var heureLocal = date.getHours();
+        var minuteLocal = date.getMinutes();
+        Horloge.innerHTML = heureLocal + ":" + minuteLocal;
 
-        var heureAAfficher[];
-                var heureAEteindre
-        [];
+        clearAll();
+        //MINUTES
+        if (minuteLocal >= 5 && minuteLocal < 10) {
+            AllumerText("cinqMinute");
+        }
+        if (minuteLocal >= 10 && minuteLocal < 15) {
+            AllumerText("dixMinute");
+        }
+        if (minuteLocal >= 15 && minuteLocal < 20) {
+            AllumerText("et");
+            AllumerText("quart");
+        }
+        if (minuteLocal >= 20 && minuteLocal < 25) {
+            AllumerText("vingt");
+        }
+        if (minuteLocal >= 25 && minuteLocal < 30) {
+            AllumerText("vingt");
+            AllumerText("-");
+            AllumerText("cinqMinute");
+        }
+        if (minuteLocal >= 30 && minuteLocal < 35) {
+            AllumerText("et");
+            AllumerText("demie");
+        }
+        if (minuteLocal >= 35 && minuteLocal <= 40) {
+            AllumerText("moins");
+            AllumerText("vingt");
+            AllumerText("-");
+            AllumerText("cinqMinute");
+            if (heureLocal !== 12) {
+                heureLocal++;
+            } else {
+                heureLocal = 0;
+            }
+        }
+        if (minuteLocal >= 40 && minuteLocal < 45) {
+            AllumerText("moins");
+            AllumerText("vingt");
+            if (heureLocal !== 12) {
+                heureLocal++;
+            } else {
+                heureLocal = 0;
+            }
+        }
+        if (minuteLocal >= 45 && minuteLocal < 50) {
+            AllumerText("moins");
+            AllumerText("le");
+            AllumerText("quart");
+            if (heureLocal !== 12) {
+                heureLocal++;
+            } else {
+                heureLocal = 0;
+            }
+        }
+        if (minuteLocal >= 50 && minuteLocal < 55) {
+            AllumerText("moins");
+            AllumerText("dixMinute");
+            if (heureLocal !== 12) {
+                heureLocal++;
+            } else {
+                heureLocal = 0;
+            }
+        }
+        if (minuteLocal >= 55 && minuteLocal < 60) {
+            AllumerText("cinq");
+            if (heureLocal !== 12) {
+                heureLocal++;
+            } else {
+                heureLocal = 0;
+            }
+        }
 
-        if (heureLocal === 1)
-            heureAAfficher = document.getElementsByClassName('une');
-        else
-            heureAEteindre.push(document.getElementsByClassName('une'));
+
+
+
+        //HEURES
+        AllumerText("heures");
+        if (heureLocal === 0) {
+            AllumerText("minuit");
+            EteindreText("heures");
+        }
+        if (heureLocal === 1) {
+            AllumerText('une');
+        }
         if (heureLocal === 2)
-            heureAAfficher = document.getElementsByClassName('deux');
-        else
-            heureAEteindre = document.getElementsByClassName('deux');
+            AllumerText('deux');
         if (heureLocal === 3)
-            heureAAfficher = document.getElementsByClassName('trois');
-        else
-            heureAEteindre = document.getElementsByClassName('trois');
+            AllumerText('trois');
         if (heureLocal === 4)
-            heureAAfficher = document.getElementsByClassName('quatre');
-        else
-            heureAEteindre = document.getElementsByClassName('quatre');
+            AllumerText('4');
         if (heureLocal === 5)
-            heureAAfficher = document.getElementsByClassName('cinq');
-        else
-            heureAEteindre = document.getElementsByClassName('cinq');
+            AllumerText('cinqHeure');
         if (heureLocal === 6)
-            heureAAfficher = document.getElementsByClassName('six');
-        else
-            heureAEteindre = document.getElementsByClassName('six');
+            AllumerText('six');
         if (heureLocal === 7)
-            heureAAfficher = document.getElementsByClassName('sept');
-        else
-            heureAEteindre = document.getElementsByClassName('sept');
+            AllumerText('sept');
         if (heureLocal === 8)
-            heureAAfficher = document.getElementsByClassName('huit');
-        else
-            heureAEteindre = document.getElementsByClassName('huit');
-    }
-    for (var i = 0; i < heureAAfficher.length; i++) {
-        heureAAfficher[i].style.color = 'red';
-    }
-    for (var i = 0; i < heureAEteindre.length; i++) {
-        heureAAfficher[i].style.color = 'black';
+            AllumerText('huit');
+        if (heureLocal === 9)
+            AllumerText('neuf');
+        if (heureLocal === 10)
+            AllumerText('dixHeure');
+        if (heureLocal === 11)
+            AllumerText("onze");
+        if (heureLocal === 12) {
+            EteindreText("heures");
+            AllumerText("midi");
+        }
+
     }
 
-
+    function AllumerText(classname) {
+        var list = document.getElementsByClassName(classname);
+        for (i = 0; i < list.length; i++) {
+            list[i].style.color = 'red';
+        }
+    }
+    function EteindreText(classname) {
+        var list = document.getElementsByClassName(classname);
+        for (i = 0; i < list.length; i++) {
+            list[i].style.color = 'black';
+        }
+    }
+    
+    function clearAll() {
+        var deux = document.getElementsByClassName("deux");
+        for (i = 0; i < deux.length; i++) {
+            deux[i].style.color = 'black';
+        }
+        var quatre = document.getElementsByClassName("quatre");
+        for (i = 0; i < quatre.length; i++) {
+            quatre[i].style.color = 'black';
+        }
+        var trois = document.getElementsByClassName("trois");
+        for (i = 0; i < trois.length; i++) {
+            trois[i].style.color = 'black';
+        }
+        var neuf = document.getElementsByClassName("neuf");
+        for (i = 0; i < neuf.length; i++) {
+            neuf[i].style.color = 'black';
+        }
+        var une = document.getElementsByClassName("une");
+        for (i = 0; i < une.length; i++) {
+            une[i].style.color = 'black';
+        }
+        var sept = document.getElementsByClassName("sept");
+        for (i = 0; i < sept.length; i++) {
+            sept[i].style.color = 'black';
+        }
+        var huit = document.getElementsByClassName("huit");
+        for (i = 0; i < huit.length; i++) {
+            huit[i].style.color = 'black';
+        }
+        var six = document.getElementsByClassName("six");
+        for (i = 0; i < six.length; i++) {
+            six[i].style.color = 'black';
+        }
+        var cinq = document.getElementsByClassName("cinq");
+        for (i = 0; i < cinq.length; i++) {
+            cinq[i].style.color = 'black';
+        }
+        var midi = document.getElementsByClassName("midi");
+        for (i = 0; i < midi.length; i++) {
+            midi[i].style.color = 'black';
+        }
+        var dix = document.getElementsByClassName("dixHeure");
+        for (i = 0; i < dix.length; i++) {
+            dix[i].style.color = 'black';
+        }
+        var minuit = document.getElementsByClassName("minuit");
+        for (i = 0; i < minuit.length; i++) {
+            minuit[i].style.color = 'black';
+        }
+        var onze = document.getElementsByClassName("onze")
+        for (i = 0; i < onze.length; i++) {
+            onze[i].style.color = 'black';
+        }
+        var heures = document.getElementsByClassName("heures");
+        for (i = 0; i < heures.length; i++) {
+            heures[i].style.color = 'black';
+        }
+        var moins = document.getElementsByClassName("moins");
+        for (i = 0; i < moins.length; i++) {
+            moins[i].style.color = 'black';
+        }
+        var le = document.getElementsByClassName("le");
+        for (i = 0; i < le.length; i++) {
+            le[i].style.color = 'black';
+        }
+        var dixMinute = document.getElementsByClassName("dixMinute");
+        for (i = 0; i < dixMinute.length; i++) {
+            dixMinute[i].style.color = 'black';
+        }
+        var et = document.getElementsByClassName("et");
+        for (i = 0; i < et.length; i++) {
+            et[i].style.color = 'black';
+        }
+        var quart = document.getElementsByClassName("quart");
+        for (i = 0; i < quart.length; i++) {
+            quart[i].style.color = 'black';
+        }
+        var vingt = document.getElementsByClassName("vingt");
+        for (i = 0; i < vingt.length; i++) {
+            vingt[i].style.color = 'black';
+        }
+        var tiret = document.getElementsByClassName("-");
+        for (i = 0; i < tiret.length; i++) {
+            tiret[i].style.color = 'black';
+        }
+        var cinqMinute = document.getElementsByClassName("cinqMinute");
+        for (i = 0; i < cinqMinute.length; i++) {
+            cinqMinute[i].style.color = 'black';
+        }
+        var demie = document.getElementsByClassName("demie");
+        for (i = 0; i < demie.length; i++) {
+            demie[i].style.color = 'black';
+        }
+    }
 </script>

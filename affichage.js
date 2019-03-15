@@ -15,6 +15,8 @@ function refresh() {
     var heure = date.getHours();
     var minutes = date.getMinutes();
     
+    
+    
     switch (minutes) {
         case 1:
             HeureAAfficher = "une";
