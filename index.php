@@ -22,6 +22,8 @@ V1.0
             </div>
             <script>
                 document.getElementById("body").style = "background-color: #682AA1";
+                var TextOnColor = "#FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px, #FFF 0px 0px 30px, #FFF 0px 0px 40px, 2px 2px 2px rgba(28,110,164,0)";
+                var TextOffColor = 'white';
                 // Script de gestion du menu
                 function Bouton(sender) {
                     var theme = sender.value;

@@ -1,12 +1,7 @@
 <style>
-    .il{
-        color: red;
-    }
-    .est{
-        color: red;
-    }
-    .neuf{
-        color: black;
+    .il, .est{
+        color: white;
+        text-shadow: #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px, #FFF 0px 0px 30px, #FFF 0px 0px 40px, 2px 2px 2px rgba(28,110,164,0);
     }
 </style>
 <div id="Horloge">
@@ -111,9 +106,9 @@
             <td>O</td>
             <td class="le">L</td>
             <td class="le">E</td>
-            <td class="dix">D</td>
-            <td class="dix">I</td>
-            <td class="dix">X</td>
+            <td class="dixMinute">D</td>
+            <td class="dixMinute">I</td>
+            <td class="dixMinute">X</td>
         </tr>
         <tr>
             <!-- E T R Q U A R T P M D -->
@@ -165,7 +160,6 @@
         var date = new Date(Date.now());
         var heureLocal = date.getHours();
         var minuteLocal = date.getMinutes();
-        Horloge.innerHTML = heureLocal + ":" + minuteLocal;
 
         clearAll();
         //MINUTES
@@ -231,7 +225,8 @@
             }
         }
         if (minuteLocal >= 55 && minuteLocal < 60) {
-            AllumerText("cinq");
+            AllumerText("cinqMinute");
+            AllumerText("moins");
             if (heureLocal !== 12) {
                 heureLocal++;
             } else {
@@ -281,108 +276,107 @@
     function AllumerText(classname) {
         var list = document.getElementsByClassName(classname);
         for (i = 0; i < list.length; i++) {
-            list[i].style.color = 'red';
+            list[i].style.textShadow = TextOnColor;
         }
     }
     function EteindreText(classname) {
         var list = document.getElementsByClassName(classname);
         for (i = 0; i < list.length; i++) {
-            list[i].style.color = 'black';
+            list[i].style.color = TextOffColor;
         }
-    }
-    
-    function clearAll() {
+    }       
+    function clearAll(color) {
         var deux = document.getElementsByClassName("deux");
         for (i = 0; i < deux.length; i++) {
-            deux[i].style.color = 'black';
+            deux[i].style.color = TextOffColor;
         }
         var quatre = document.getElementsByClassName("quatre");
         for (i = 0; i < quatre.length; i++) {
-            quatre[i].style.color = 'black';
+            quatre[i].style.color = TextOffColor;
         }
         var trois = document.getElementsByClassName("trois");
         for (i = 0; i < trois.length; i++) {
-            trois[i].style.color = 'black';
+            trois[i].style.color = TextOffColor;
         }
         var neuf = document.getElementsByClassName("neuf");
         for (i = 0; i < neuf.length; i++) {
-            neuf[i].style.color = 'black';
+            neuf[i].style.color = TextOffColor;
         }
         var une = document.getElementsByClassName("une");
         for (i = 0; i < une.length; i++) {
-            une[i].style.color = 'black';
+            une[i].style.color = TextOffColor;
         }
         var sept = document.getElementsByClassName("sept");
         for (i = 0; i < sept.length; i++) {
-            sept[i].style.color = 'black';
+            sept[i].style.color = TextOffColor;
         }
         var huit = document.getElementsByClassName("huit");
         for (i = 0; i < huit.length; i++) {
-            huit[i].style.color = 'black';
+            huit[i].style.color = TextOffColor;
         }
         var six = document.getElementsByClassName("six");
         for (i = 0; i < six.length; i++) {
-            six[i].style.color = 'black';
+            six[i].style.color = TextOffColor;
         }
         var cinq = document.getElementsByClassName("cinq");
         for (i = 0; i < cinq.length; i++) {
-            cinq[i].style.color = 'black';
+            cinq[i].style.color = TextOffColor;
         }
         var midi = document.getElementsByClassName("midi");
         for (i = 0; i < midi.length; i++) {
-            midi[i].style.color = 'black';
+            midi[i].style.color = TextOffColor;
         }
         var dix = document.getElementsByClassName("dixHeure");
         for (i = 0; i < dix.length; i++) {
-            dix[i].style.color = 'black';
+            dix[i].style.color = TextOffColor;
         }
         var minuit = document.getElementsByClassName("minuit");
         for (i = 0; i < minuit.length; i++) {
-            minuit[i].style.color = 'black';
+            minuit[i].style.color = TextOffColor;
         }
         var onze = document.getElementsByClassName("onze")
         for (i = 0; i < onze.length; i++) {
-            onze[i].style.color = 'black';
+            onze[i].style.color = TextOffColor;
         }
         var heures = document.getElementsByClassName("heures");
         for (i = 0; i < heures.length; i++) {
-            heures[i].style.color = 'black';
+            heures[i].style.color = TextOffColor;
         }
         var moins = document.getElementsByClassName("moins");
         for (i = 0; i < moins.length; i++) {
-            moins[i].style.color = 'black';
+            moins[i].style.color = TextOffColor;
         }
         var le = document.getElementsByClassName("le");
         for (i = 0; i < le.length; i++) {
-            le[i].style.color = 'black';
+            le[i].style.color = TextOffColor;
         }
         var dixMinute = document.getElementsByClassName("dixMinute");
         for (i = 0; i < dixMinute.length; i++) {
-            dixMinute[i].style.color = 'black';
+            dixMinute[i].style.color = TextOffColor;
         }
         var et = document.getElementsByClassName("et");
         for (i = 0; i < et.length; i++) {
-            et[i].style.color = 'black';
+            et[i].style.color = TextOffColor;
         }
         var quart = document.getElementsByClassName("quart");
         for (i = 0; i < quart.length; i++) {
-            quart[i].style.color = 'black';
+            quart[i].style.color = TextOffColor;
         }
         var vingt = document.getElementsByClassName("vingt");
         for (i = 0; i < vingt.length; i++) {
-            vingt[i].style.color = 'black';
+            vingt[i].style.color = TextOffColor;
         }
         var tiret = document.getElementsByClassName("-");
         for (i = 0; i < tiret.length; i++) {
-            tiret[i].style.color = 'black';
+            tiret[i].style.color = TextOffColor;
         }
         var cinqMinute = document.getElementsByClassName("cinqMinute");
         for (i = 0; i < cinqMinute.length; i++) {
-            cinqMinute[i].style.color = 'black';
+            cinqMinute[i].style.color = TextOffColor;
         }
         var demie = document.getElementsByClassName("demie");
         for (i = 0; i < demie.length; i++) {
-            demie[i].style.color = 'black';
+            demie[i].style.color = TextOffColor;
         }
     }
 </script>
