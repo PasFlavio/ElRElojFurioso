@@ -38,7 +38,7 @@ V1.0
                 }
             </script>
         </header>
-        <div>
+        <div id='conteneurHorloge'>
             <?php
             include_once 'HorlogeFR.php';
             ?>

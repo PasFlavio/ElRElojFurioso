@@ -12,6 +12,7 @@
 <div id="Horloge">
 
 </div>
+<link href="CSS/main.css" rel="stylesheet" type="text/css"/>
 <table border="1" cellspacing="5">
     <thead>
         <!-- I L N E S T O D E U X -->
@@ -117,7 +118,7 @@
         <tr>
             <!-- E T R Q U A R T P M D -->
             <td class="et">E</td>
-            <td class=""et>T</td>
+            <td class="et">T</td>
             <td>R</td>
             <td class="quart">Q</td>
             <td class="quart">U</td>
@@ -136,16 +137,16 @@
             <td class="vingt">G</td>
             <td class="vingt">T</td>
             <td class="-">-</td>
-            <td class="cinq">C</td>
-            <td class="cinq">I</td>
-            <td class="cinq">N</td>
-            <td class="cinq">Q</td>
+            <td class="cinqMinute">C</td>
+            <td class="cinqMinute">I</td>
+            <td class="cinqMinute">N</td>
+            <td class="cinqMinute">Q</td>
             <td>U</td>
         </tr>
         <tr>
             <!-- E T S D E M I E P A M -->
-            <td class="et">E</td>
-            <td class="et">T</td>
+            <td>E</td>
+            <td>T</td>
             <td>S</td>
             <td class="demie">D</td>
             <td class="demie">E</td>

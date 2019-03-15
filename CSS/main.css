@@ -2,10 +2,15 @@ header {
     background-image: url(../img/header_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 50px;
+    -webkit-box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
 }
 
 body {
-    width: 1600px;
+    width: 1680px;
+    margin: auto;
 }
 
 div#Carre{
@@ -24,10 +29,41 @@ div#Rond{
 }
 
 div#Triangle{
-   width:0px;
-   height:0px;
-   border-left: 200px solid transparent;
-   border-right: 200px solid transparent;
-   border-top: 400px solid red;
-   margin:10px auto;
+    width:0px;
+    height:0px;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 400px solid red;
+    margin:10px auto;
+}
+
+#LecteurMp3 {
+    visibility: hidden;
+}
+
+#conteneurMusique {
+    float: left;
+}
+
+.btn:hover {
+    background-color: #000000;
+    font-weight: bold;
+    transition: ease-out;
+}
+
+.btn {
+    float: left;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    color: white;
+    border-bottom: none;
+    border-top: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+table {
+    border: none;
+    align-items: center;
 }
