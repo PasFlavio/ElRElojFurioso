@@ -1,3 +1,8 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
 header {
     background-image: url(../img/header_bg.jpg);
     background-repeat: no-repeat;
@@ -30,4 +35,25 @@ div#Triangle{
    border-right: 200px solid transparent;
    border-top: 400px solid red;
    margin:10px auto;
+}
+footer{
+    background-color: goldenrod;
+    height: 15%;
+}
+footer table{
+    border-spacing: 0px;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+footer table td{
+
+    margin: 0px;
+}
+.Barre{
+    border-right: black 5px solid ;
+}
+.autre{
+    width: 50%;
 }
