@@ -282,101 +282,101 @@
     function EteindreText(classname) {
         var list = document.getElementsByClassName(classname);
         for (i = 0; i < list.length; i++) {
-            list[i].style.color = TextOffColor;
+            list[i].style.textShadow = TextOffColor;
         }
     }       
     function clearAll(color) {
         var deux = document.getElementsByClassName("deux");
         for (i = 0; i < deux.length; i++) {
-            deux[i].style.color = TextOffColor;
+            deux[i].style.textShadow = TextOffColor;
         }
         var quatre = document.getElementsByClassName("quatre");
         for (i = 0; i < quatre.length; i++) {
-            quatre[i].style.color = TextOffColor;
+            quatre[i].style.textShadow = TextOffColor;
         }
         var trois = document.getElementsByClassName("trois");
         for (i = 0; i < trois.length; i++) {
-            trois[i].style.color = TextOffColor;
+            trois[i].style.textShadow = TextOffColor;
         }
         var neuf = document.getElementsByClassName("neuf");
         for (i = 0; i < neuf.length; i++) {
-            neuf[i].style.color = TextOffColor;
+            neuf[i].style.textShadow = TextOffColor;
         }
         var une = document.getElementsByClassName("une");
         for (i = 0; i < une.length; i++) {
-            une[i].style.color = TextOffColor;
+            une[i].style.textShadow = TextOffColor;
         }
         var sept = document.getElementsByClassName("sept");
         for (i = 0; i < sept.length; i++) {
-            sept[i].style.color = TextOffColor;
+            sept[i].style.textShadow = TextOffColor;
         }
         var huit = document.getElementsByClassName("huit");
         for (i = 0; i < huit.length; i++) {
-            huit[i].style.color = TextOffColor;
+            huit[i].style.textShadow = TextOffColor;
         }
         var six = document.getElementsByClassName("six");
         for (i = 0; i < six.length; i++) {
-            six[i].style.color = TextOffColor;
+            six[i].style.textShadow = TextOffColor;
         }
         var cinq = document.getElementsByClassName("cinq");
         for (i = 0; i < cinq.length; i++) {
-            cinq[i].style.color = TextOffColor;
+            cinq[i].style.textShadow = TextOffColor;
         }
         var midi = document.getElementsByClassName("midi");
         for (i = 0; i < midi.length; i++) {
-            midi[i].style.color = TextOffColor;
+            midi[i].style.textShadow = TextOffColor;
         }
         var dix = document.getElementsByClassName("dixHeure");
         for (i = 0; i < dix.length; i++) {
-            dix[i].style.color = TextOffColor;
+            dix[i].style.textShadow = TextOffColor;
         }
         var minuit = document.getElementsByClassName("minuit");
         for (i = 0; i < minuit.length; i++) {
-            minuit[i].style.color = TextOffColor;
+            minuit[i].style.textShadow = TextOffColor;
         }
         var onze = document.getElementsByClassName("onze")
         for (i = 0; i < onze.length; i++) {
-            onze[i].style.color = TextOffColor;
+            onze[i].style.textShadow = TextOffColor;
         }
         var heures = document.getElementsByClassName("heures");
         for (i = 0; i < heures.length; i++) {
-            heures[i].style.color = TextOffColor;
+            heures[i].style.textShadow = TextOffColor;
         }
         var moins = document.getElementsByClassName("moins");
         for (i = 0; i < moins.length; i++) {
-            moins[i].style.color = TextOffColor;
+            moins[i].style.textShadow = TextOffColor;
         }
         var le = document.getElementsByClassName("le");
         for (i = 0; i < le.length; i++) {
-            le[i].style.color = TextOffColor;
+            le[i].style.textShadow = TextOffColor;
         }
         var dixMinute = document.getElementsByClassName("dixMinute");
         for (i = 0; i < dixMinute.length; i++) {
-            dixMinute[i].style.color = TextOffColor;
+            dixMinute[i].style.textShadow = TextOffColor;
         }
         var et = document.getElementsByClassName("et");
         for (i = 0; i < et.length; i++) {
-            et[i].style.color = TextOffColor;
+            et[i].style.textShadow = TextOffColor;
         }
         var quart = document.getElementsByClassName("quart");
         for (i = 0; i < quart.length; i++) {
-            quart[i].style.color = TextOffColor;
+            quart[i].style.textShadow = TextOffColor;
         }
         var vingt = document.getElementsByClassName("vingt");
         for (i = 0; i < vingt.length; i++) {
-            vingt[i].style.color = TextOffColor;
+            vingt[i].style.textShadow = TextOffColor;
         }
         var tiret = document.getElementsByClassName("-");
         for (i = 0; i < tiret.length; i++) {
-            tiret[i].style.color = TextOffColor;
+            tiret[i].style.textShadow = TextOffColor;
         }
         var cinqMinute = document.getElementsByClassName("cinqMinute");
         for (i = 0; i < cinqMinute.length; i++) {
-            cinqMinute[i].style.color = TextOffColor;
+            cinqMinute[i].style.textShadow = TextOffColor;
         }
         var demie = document.getElementsByClassName("demie");
         for (i = 0; i < demie.length; i++) {
-            demie[i].style.color = TextOffColor;
+            demie[i].style.textShadow = TextOffColor;
         }
     }
 </script>
