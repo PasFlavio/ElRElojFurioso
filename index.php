@@ -11,7 +11,7 @@ V1.0
         <title>Horloge Furieuse</title>
     </head>
     <body id='body'>
-        <header>
+        <header id="topMenu">
             <button id="btnThemeViolet" value="violet" name="btnThemeGris" class="btn" onclick="Bouton(this)">Thème Violet</button>
             <button id="btnThemeRose" value="rose" name="btnThemeRose" class="btn" onclick="Bouton(this)">Thème Rose</button>
             <button id="btnThemeNoir" value="noir" name="btnThemeNoir" class="btn" onclick="Bouton(this)">Thème Noir</button>
@@ -32,9 +32,11 @@ V1.0
                         document.getElementById("body").style = "background-color: #682AA1";
                     }
                     if (theme === "rose") {
+                        document.getElementById("topMenu").style = "background-color: #A30E65";
                         document.getElementById("body").style = "background-color: #E044A9";
                     }
                     if (theme === "noir") {
+                        document.getElementById("topMenu").style = "background-color: #A30E65";
                         document.getElementById("body").style = "background-color: #1d1d1d";
                     }
                 }
