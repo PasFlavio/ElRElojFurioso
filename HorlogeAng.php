@@ -51,11 +51,11 @@
                     <td class="vingt">N</td>
                     <td class="vingt">T</td>
                     <td class="vingt">Y</td>
+                    <td>X</td>
                     <td class="cinqMinute">F</td>
                     <td class="cinqMinute">I</td>
                     <td class="cinqMinute">V</td>
                     <td class="cinqMinute">E</td>
-                    <td>X</td>
                 </tr>
                 <tr>
                     <!-- H U I T S I X C I N Q -->
@@ -205,28 +205,28 @@
             var minute = now.getMinutes();
 
             for (i = 0; i < il.length; i++) {
-                il[i].style.color = "red";
+                il[i].style.textShadow = TextOnColor;
             }
 
             for (i = 0; i < est.length; i++) {
-                est[i].style.color = "red";
+                est[i].style.textShadow = TextOnColor;
             }
 
             if (heure > 12) {
                 for (i = 0; i < apresmidi.length; i++) {
-                    apresmidi[i].style.color = "red";
+                    apresmidi[i].style.textShadow = TextOnColor;
                 }
             }
 
             if (heure < 12) {
                 for (i = 0; i < matin.length; i++) {
-                    matin[i].style.color = "red";
+                    matin[i].style.textShadow = TextOnColor;
                 }
             }
 
             if (minute < 5) {
                 for (i = 0; i < pile.length; i++) {
-                    pile[i].style.color = "red";
+                    pile[i].style.textShadow = TextOnColor;
                 }
             }
             if (minute < 10 && minute >= 5) {
@@ -291,124 +291,124 @@
 
         function EclairerLettre(lettre) {
             for (i = 0; i < lettre.length; i++) {
-                lettre[i].style.color = "red";
+                lettre[i].style.textShadow = TextOnColor;
             }
         }
 
         function Heure(heure) {
-            if (heure == 1) {
+            if (heure === 1) {
                 EclairerLettre(un);
             }
-            if (heure == 2) {
+            if (heure === 2) {
                 EclairerLettre(deux);
             }
-            if (heure == 3) {
+            if (heure === 3) {
                 EclairerLettre(trois);
             }
-            if (heure == 4) {
+            if (heure === 4) {
                 EclairerLettre(quatre);
             }
-            if (heure == 5) {
+            if (heure === 5) {
                 EclairerLettre(cinq);
             }
-            if (heure == 6) {
+            if (heure === 6) {
                 EclairerLettre(six);
             }
-            if (heure == 7) {
+            if (heure === 7) {
                 EclairerLettre(sept);
             }
-            if (heure == 8) {
+            if (heure === 8) {
                 EclairerLettre(huit);
             }
-            if (heure == 9) {
+            if (heure === 9) {
                 EclairerLettre(neuf);
             }
-            if (heure == 10) {
+            if (heure === 10) {
                 EclairerLettre(dix);
             }
-            if (heure == 11) {
+            if (heure === 11) {
                 EclairerLettre(onze);
             }
-            if (heure == 12) {
+            if (heure === 12) {
                 EclairerLettre(douze);
             }
         }
 
         function clearAll() {
             for (i = 0; i < deux.length; i++) {
-                deux[i].style.color = 'black';
+                deux[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < quatre.length; i++) {
-                quatre[i].style.color = 'black';
+                quatre[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < trois.length; i++) {
-                trois[i].style.color = 'black';
+                trois[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < neuf.length; i++) {
-                neuf[i].style.color = 'black';
+                neuf[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < un.length; i++) {
-                un[i].style.color = 'black';
+                un[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < sept.length; i++) {
-                sept[i].style.color = 'black';
+                sept[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < huit.length; i++) {
-                huit[i].style.color = 'black';
+                huit[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < six.length; i++) {
-                six[i].style.color = 'black';
+                six[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < cinq.length; i++) {
-                cinq[i].style.color = 'black';
+                cinq[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < cinqMinute.length; i++) {
-                cinqMinute[i].style.color = 'black';
+                cinqMinute[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < matin.length; i++) {
-                matin[i].style.color = 'matin';
+                matin[i].style.textShadow = 'matin';
             }
             for (i = 0; i < dix.length; i++) {
-                dix[i].style.color = 'black';
+                dix[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < dixMinute.length; i++) {
-                dixMinute[i].style.color = 'black';
+                dixMinute[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < apresmidi.length; i++) {
-                apresmidi[i].style.color = 'black';
+                apresmidi[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < onze.length; i++) {
-                onze[i].style.color = 'black';
+                onze[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < il.length; i++) {
-                il[i].style.color = 'black';
+                il[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < est.length; i++) {
-                est[i].style.color = 'black';
+                est[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < pour.length; i++) {
-                pour[i].style.color = 'black';
+                pour[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < apres.length; i++) {
-                apres[i].style.color = 'black';
+                apres[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < pile.length; i++) {
-                pile[i].style.color = 'black';
+                pile[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < a.length; i++) {
-                a[i].style.color = 'black';
+                a[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < quart.length; i++) {
-                quart[i].style.color = 'black';
+                quart[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < vingt.length; i++) {
-                vingt[i].style.color = 'black';
+                vingt[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < demi.length; i++) {
-                demi[i].style.color = 'black';
+                demi[i].style.textShadow = TextOffColor;
             }
             for (i = 0; i < douze.length; i++) {
-                douze[i].style.color = 'black';
+                douze[i].style.textShadow = TextOffColor;
             }
         }
 
