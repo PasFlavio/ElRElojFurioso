@@ -10,11 +10,15 @@
         </tr>
         <tr>
             <td class="Barre">Carvalho</td>
-            <td class="autre"><b>L'heure de l'horloge s'actualise </b></td>
+            <td class="autre"><b>L'heure de l'horloge s'actualise <br>
+                    toutes les cinq minutes
+                </b></td>
         </tr>
         <tr>
             <td class="Barre">Morrone</td>
-            <td class="autre"><b>toutes les cinq minutes </b></td>
+            <td class="autre"><b>Le modèle de l'horloge a été inspiré<br>
+                                de QLOCKTWO
+                </b></td>
         </tr>
         <tr>
             <td class="Barre">Romaniello</td>
@@ -22,7 +26,7 @@
         </tr>
         <tr>
             <td class="Barre">Marchal</td>
-            <td class="autre"><b>La musique peut être arrêtée et téléchargée.</b></td>
+            <td class="autre"></td>
         </tr>
     </table>
 </footer>
